@@ -1,6 +1,8 @@
 <?php
 namespace app\index\controller;
 
+use think\facade\Config;
+
 class Index
 {
     public function index()
@@ -11,5 +13,10 @@ class Index
     public function hello($name = 'ThinkPHP5')
     {
         return 'hello,' . $name;
+    }
+
+    public function index2()
+    {
+        return Config::get('status.success');
     }
 }
